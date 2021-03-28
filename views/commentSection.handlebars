@@ -1,0 +1,15 @@
+<h3>your posts go here {{name}}</h3>
+
+<form action="/newpost" method="get">
+<button type="submit" class="btn btn-primary">New Post</button>
+</form>
+
+<div id="posts">
+{{#each posts as |post|}}
+{{> postCard}}
+<button class="btn btn-danger delBtn" data-id={{post.id}}>Delete Post</button>
+<button class="btn btn-primary editBtn" data-id={{post.id}}>Edit Post</button>
+{{/each}}
+</div>
+
+<script src="/assets/js/delete.js"> </script>

@@ -22,7 +22,7 @@ router.get('/', async (req, res) => {
   }
 });
 
-router.get('/dashboard', withAuth, async (req, res) => {
+router.get('/commentSection', withAuth, async (req, res) => {
   try {
     const postData = await Post.findAll({
       include: [{ model: User }],
@@ -34,7 +34,7 @@ router.get('/dashboard', withAuth, async (req, res) => {
 
     const posts = postData.map((post) => post.get({ plain: true }));
 
-    res.render('dashboard', {
+    res.render('commentSection', {
       posts,
       name: req.session.user_name,
       title: "Dashboard",

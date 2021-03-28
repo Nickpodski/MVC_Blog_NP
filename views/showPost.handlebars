@@ -1,0 +1,21 @@
+{{> postCard post}}
+
+{{#if logged_in}}
+
+<div class="commentForm hidden">
+
+  <form id="newCommentForm">
+    <div class="form-group">
+      <label for="newComment">Comment Here</label>
+      <textarea class="form-control" id="newComment" name="comment" rows="3"></textarea>
+    </div>
+
+    <button type="submit" class="btn btn-success">Post</button>
+    
+  </form>
+</div>
+
+<button id="commentBtn" class="btn btn-primary">Create Comment</button>
+{{/if}}
+
+<script src="/assets/js/comment.js"></script>

@@ -1,0 +1,9 @@
+<h1>WELCOME TO THE WEBSITE{{#if name}}: {{ name}} {{/if}}<h1>
+
+<h4>POSTS</h4>
+
+{{#each posts as |post|}}
+{{> postCard}}
+{{/each}}
+
+<script src="/assets/js/index.js"></script>

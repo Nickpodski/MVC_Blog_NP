@@ -1,0 +1,21 @@
+<div class="card" data-id={{id}}>
+
+  <div class="card-body">
+    <h5 class="card-title">{{title}}</h5>
+    <h6 class="card-subtitle mb-2 text-muted">By: {{user.name}} on: {{created_on}} {{#if updated_on}} Updated:
+      {{updated_on}} {{/if}}</h6>
+    <p class="card-text">{{text}}</p>
+  </div>
+
+</div>
+
+{{#each comments as |comment|}}
+<div class="card" data-id={{id}}>
+
+  <div class="card-body">
+    <h6 class="card-subtitle mb-2 text-muted">By: {{user.name}} on: {{created_on}}</h6>
+    <p class="card-text">{{text}}</p>
+  </div>
+  
+</div>
+{{/each}}

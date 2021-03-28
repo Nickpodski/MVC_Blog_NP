@@ -1,0 +1,16 @@
+<div class="postForm" data-id={{post.id}}>
+<form id="editPostForm">
+  <div class="form-group">
+    <label for="title">Post Title</label>
+    <input type="text" class="form-control" id="title" name="title" value={{post.title}}>
+  </div>
+  <div class="form-group">
+    <label for="newPost">Post Here</label>
+    <textarea class="form-control" id="newPost" name="post" rows="3">{{post.text}}</textarea>
+  </div>
+
+  <button type="submit" class="btn btn-primary">Edit Post</button>
+</form>
+</div>
+
+<script src="/assets/js/post.js"></script>
